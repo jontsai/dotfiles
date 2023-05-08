@@ -50,7 +50,7 @@ alias third-bottom-right corner bottom-right resize:screenSizeX/3;screenSizeY/2
 
 
 # ==================================================
-# Numpad location Bindings
+# Numpad (and u;i;o;j;k;l;m;,;.) location Bindings
 # ==================================================
 
 
@@ -58,34 +58,54 @@ alias third-bottom-right corner bottom-right resize:screenSizeX/3;screenSizeY/2
 bind pad7:cmd ${quad-top-left}
 bind pad8:cmd ${half-bottom}
 bind pad9:cmd ${quad-top-right}
+bind u:ctrl;alt;cmd ${quad-top-left}
+bind i:ctrl;alt;cmd ${half-bottom}
+bind o:ctrl;alt;cmd ${quad-top-right}
 
 bind pad4:cmd ${half-left}
 bind pad5:cmd ${full}
 bind pad6:cmd ${half-right}
+bind j:ctrl;alt;cmd ${half-left}
+bind k:ctrl;alt;cmd ${full}
+bind l:ctrl;alt;cmd ${half-right}
 
 bind pad1:cmd ${quad-bottom-left}
 bind pad2:cmd ${half-top}
 bind pad3:cmd ${quad-bottom-right}
+bind m:ctrl;alt;cmd ${quad-bottom-left}
+bind ,:ctrl;alt;cmd ${half-top}
+bind .:ctrl;alt;cmd ${quad-bottom-right}
+
 
 # "hthirds"
 bind pad4:cmd,shift ${hthird-left}
 bind pad5:cmd,shift ${hthird-center}
 bind pad6:cmd,shift ${hthird-right}
+bind j:ctrl;alt;cmd;shift ${hthird-left}
+bind k:ctrl;alt;cmd;shift ${hthird-center}
+bind l:ctrl;alt;cmd;shift ${hthird-right}
+
 
 # "vthirds"
 bind pad8:cmd,ctrl ${vthird-top}
 bind pad5:cmd,ctrl ${vthird-center}
 bind pad2:cmd,ctrl ${vthird-bottom}
 
+
 # "thirds"
 bind pad7:cmd,shift ${third-top-left}
 bind pad8:cmd,shift ${third-top-center}
 bind pad9:cmd,shift ${third-top-right}
+bind u:ctrl;alt;cmd;shift ${third-top-left}
+bind i:ctrl;alt;cmd;shift ${third-top-center}
+bind o:ctrl;alt;cmd;shift ${third-top-right}
 
 bind pad1:cmd,shift ${third-bottom-left}
 bind pad2:cmd,shift ${third-bottom-center}
 bind pad3:cmd,shift ${third-bottom-right}
-
+bind m:ctrl;alt;cmd;shift ${third-bottom-left}
+bind ,:ctrl;alt;cmd;shift ${third-bottom-center}
+bind .:ctrl;alt;cmd;shift ${third-bottom-right}
 
 # ==================================================
 # Default configs
