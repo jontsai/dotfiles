@@ -10,6 +10,8 @@
 [gpg "ssh"]
     # Verification uses allowedSignersFile with email × key combinations
     allowedSignersFile = ~/.ssh/allowed_signers
+    # Dynamically use first key from ssh-agent for signing
+    defaultKeyCommand = ssh-add -L | head -n1
 
 [commit]
     gpgsign = true
@@ -40,6 +42,14 @@
 
 [push]
     default = simple
+
+[submodule]
+    recurse = true
+
+[blame]
+    # Ignore formatting/refactoring commits in git blame view
+    # https://docs.github.com/en/repositories/working-with-files/using-files/viewing-a-file#ignore-commits-in-the-blame-view
+    ignoreRevsFile = .git-blame-ignore-revs
 
 [color]
     ui = true
