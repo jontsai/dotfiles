@@ -32,6 +32,10 @@
     dsf = "!f() { [ \"$GIT_PREFIX\" != \"\" ] && cd "$GIT_PREFIX"; git diff --color $@ | diff-so-fancy | less --tabs=4 -RFX; }; f"
     permission-reset = !git diff -p -R --no-ext-diff --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
     uncommit = reset --soft HEAD^
+    # Show git log with signature status (G=good, B=bad, U=unknown, N=none)
+    slog = log --pretty=format:\"%C(auto)%h %G? %C(blue)%an%C(reset) %s %C(dim)(%ar)%C(reset)\"
+    # Show git log with full signature details
+    logs = log --show-signature
 
 [pager]
 #    diff = diff-so-fancy | less --tabs=4 -RFX
