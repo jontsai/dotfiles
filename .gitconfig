@@ -11,7 +11,7 @@
     # Verification uses allowedSignersFile with email × key combinations
     allowedSignersFile = ~/.ssh/allowed_signers
     # Dynamically use first key from ssh-agent for signing
-    defaultKeyCommand = ssh-add -L | head -n1
+    defaultKeyCommand = sh -c 'ssh-add -L | head -n1'
 
 [commit]
     gpgsign = true
