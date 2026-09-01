@@ -103,9 +103,14 @@ bind o:ctrl;alt;cmd;shift ${third-top-right}
 bind pad1:cmd,shift ${third-bottom-left}
 bind pad2:cmd,shift ${third-bottom-center}
 bind pad3:cmd,shift ${third-bottom-right}
-bind m:ctrl;alt;cmd;shift ${third-bottom-left}
-bind ,:ctrl;alt;cmd;shift ${third-bottom-center}
-bind .:ctrl;alt;cmd;shift ${third-bottom-right}
+# NOTE: bottom row is b;n;m instead of the grid-aligned m;,;. because
+# hyper (ctrl;shift;alt;cmd) + , or . collides with macOS's built-in
+# sysdiagnose keychords: Cmd-Opt-Ctrl-Shift-. = full sysdiagnose (screen
+# flash), Cmd-Opt-Ctrl-Shift-, = tailspin sysdiagnose. macOS grabs those
+# system-wide before Slate sees them, so we shift the row over to b;n;m.
+bind b:ctrl;alt;cmd;shift ${third-bottom-left}
+bind n:ctrl;alt;cmd;shift ${third-bottom-center}
+bind m:ctrl;alt;cmd;shift ${third-bottom-right}
 
 # ==================================================
 # Default configs
